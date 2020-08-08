@@ -62,9 +62,12 @@ textarea {
   vertical-align: middle;
   font-size: 1.1em;
 }
-#contact-email-form input[type='radio']:active {
-  border: 2px solid tan;
-  border-radius: 2px;
+#contact-email-form input[type='radio']:checked,
+#contact-email-form input[type='radio']:hover,
+fieldset label:active,
+fieldset label:hover,
+label:hover {
+  color: tan;
   outline: unset;
 }
 input:invalid {
