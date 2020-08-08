@@ -430,7 +430,7 @@ input[type='reset']:focus {
 @media screen and (max-width: 500px) {
   nav {
     height: 40px;
-    font-size: 0.45em;
+    font-size: 0.43em;
   }
   header {
     font-size: 0.7em;
