@@ -399,16 +399,22 @@ input[type='reset']:focus {
     padding: 10px;
   }
   nav {
-    height: 60px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 580px) {
+  nav {
+    height: 40px;
+    font-size: x-small;
   }
 }
 @media screen and (max-width: 500px) {
   nav {
-    height: 60px;
-    font-size: smaller;
+    height: 35px;
+    font-size: x-small;
   }
   header {
-    font-size: medium;
+    font-size: small;
     padding: 5px;
   }
   #body-content {
@@ -424,6 +430,10 @@ input[type='reset']:focus {
 @media screen and (max-width: 500px) {
   nav {
     height: 40px;
-    font-size: xx-small;
+    font-size: 0.45em;
+  }
+  header {
+    font-size: 0.7em;
+    padding: 3px;
   }
 }
