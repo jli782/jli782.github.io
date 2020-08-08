@@ -36,12 +36,19 @@
       action="https://httpbin.org/post"
     >
       <label for="contact-name-info">Name</label>
-      <input id="contact-name-info" autocomplete="name" required type="text" autofocus />
+      <input
+        id="contact-name-info"
+        name="contact-name"
+        autocomplete="name"
+        required
+        type="text"
+        autofocus
+      />
       <label for="contact-email-info">Email</label>
       <input
         id="contact-email-info"
         type="email"
-        name="_replyto"
+        name="contact-email"
         placeholder="abc123@email.ca"
         size="35"
         autocomplete="off"
