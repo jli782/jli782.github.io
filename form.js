@@ -15,6 +15,16 @@
         });
       }
     }
+
+    //scroll up button
+    var goUpBtn = document.querySelector('#go-top-btn');
+    window.addEventListener('scroll', () => {
+      if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        goUpBtn.style.display = 'block';
+      } else {
+        goUpBtn.style.display = 'none';
+      }
+    });
   } //
   window.onload = setEvents;
 })();
