@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Roboto&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Patua+One&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
+#contact-us a {
+  background: rgb(185, 180, 172);
+  color: #ffffff;
+  font-weight: 900;
+}
+#contact-email-form {
+  box-sizing: border-box;
+  margin: 30px auto;
+  border: 1px solid darkgray;
+  border-radius: 1.5px;
+  padding: 2.5em;
+  max-width: 900px;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  grid-gap: 20px;
+  font-size: 1.3em;
+}
+fieldset {
+  border-width: 0;
+  grid-column: 2/3;
+  text-align: center;
+  padding: 0;
+  margin-left: 0;
+  grid-row: 6/7;
+}
+.radio-options {
+  /* justify-content: right; */
+  width: 100%;
+}
+input[type='radio'] {
+  margin-left: 30px;
+}
+.contact-order-problem-text {
+  grid-column: 6/7;
+}
+.contact-order-problem-text label {
+  padding-right: 15px;
+}
+textarea {
+  width: 100%;
+  height: 300px;
+  grid-row: 7/8;
+  grid-column: 1/3;
+  font-size: 1.2em;
+}
+#buttons {
+  width: 100%;
+  grid-column: 2/3;
+  grid-row: 8/9;
+  text-align: right;
+}
+#contact-email-form input[type='Submit'],
+#contact-email-form input[type='reset'] {
+  text-align: center;
+  height: 1.5em;
+  width: 50%;
+  vertical-align: middle;
+  font-size: 1.1em;
+}
+#contact-email-form input[type='radio']:active {
+  border: 2px solid tan;
+  border-radius: 2px;
+  outline: unset;
+}
+input:invalid {
+  color: crimson;
+  font-weight: 900;
+}
+input:hover,
+input:focus,
+textarea:focus,
+textarea:hover {
+  outline: 2px solid tan;
+  border: 0;
+  background-color: rgb(243, 243, 239);
+}
+@media screen and (max-width: 1000px) {
+  #contact-email-form {
+    margin: 20px auto;
+    max-width: 750px;
+  }
+  input[type='radio'] {
+    margin-left: 15px;
+  }
+  fieldset label {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 800px) {
+  #contact-email-form {
+    margin: 20px auto;
+    max-width: 650px;
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .contact-order-problem-text {
+    text-align: center;
+  }
+  .contact-order-problem-text label {
+    padding-right: 0;
+  }
+  #buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  #contact-email-form input[type='Submit'],
+  #contact-email-form input[type='reset'] {
+    width: 70%;
+    margin-left: 0;
+  }
+  fieldset {
+    width: 80%;
+  }
+  #contact-email-form input {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #contact-email-form {
+    padding: 15px;
+    margin: 0;
+    border: 0;
+  }
+  fieldset {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+  }
+  input[type='radio'] {
+    margin-left: 5px;
+  }
+  .contact-order-problem-text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  #contact-email-form {
+    padding: 25px auto;
+    grid-gap: 40px;
+    padding-bottom: 30px;
+  }
+  #buttons {
+    text-align: left;
+  }
+  #foot-info {
+    height: 75px;
+    font-size: medium;
+  }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>WEB222 Store Forms</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="forms_style.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="home">
+        <!-- https://pixabay.com/vectors/bait-fish-fishing-hook-2026318/ -->
+        <img src="images/bait-2026318_640.jpg" id="comp-logo" alt="logo" height="70" />
+        <h1><span id="head-title">Sample</span> Fishing Supplies</h1></a
+      >
+      <h3>Fair prices, good deals for any fishing enthusiast!</h3>
+    </header>
+    <nav>
+      <ul>
+        <li id="all-items" class="menu-selection"><a href="index.html">ALL ITEMS</a></li>
+        <li id="contact-us" class="menu-selection">
+          <a href="form.html" id="contact-us-page">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+    <!--all input forms should be required unless noted in the outline-->
+    <form
+      id="contact-email-form"
+      name="contact-email-form"
+      method="POST"
+      action="https://httpbin.org/post"
+    >
+      <label for="contact-name-info">Name</label>
+      <input id="contact-name-info" autocomplete="name" required type="text" autofocus />
+      <label for="contact-email-info">Email</label>
+      <input
+        id="contact-email-info"
+        type="email"
+        name="_replyto"
+        placeholder="abc123@email.ca"
+        size="35"
+        autocomplete="off"
+        required
+        tabindex="0"
+      />
+      <label for="contact-address-info">Street Address</label>
+      <input
+        id="contact-address-info"
+        type="text"
+        name="contact-address-info"
+        required
+        size="50"
+        tabindex="0"
+      />
+
+      <!--datalist for cities in Canada-->
+      <label for="contact-cty-info">City</label>
+      <input
+        list="canadian-cities"
+        id="contact-cty-info"
+        name="contact-cty-info"
+        placeholder="Choose a city"
+        tabindex="0"
+        required
+        size="30"
+      />
+      <datalist id="canadian-cities">
+        <option value="Calgary"> </option>
+        <option value="Edmonton"> </option>
+        <option value="Montreal"> </option>
+        <option value="Ottawa"> </option>
+        <option value="Toronto"> </option>
+        <option value="Vancouver"> </option>
+        <option value="Victoria"> </option>
+        <option value="Winnipeg"> </option>
+      </datalist>
+
+      <label for="contact-postal-code-info">Postal Code</label>
+      <input
+        id="contact-postal-code-info"
+        type="text"
+        required
+        tabindex="0"
+        size="9"
+        pattern="^[a-zA-Z][\d][a-zA-Z] ?[\d][a-zA-Z][\d]$"
+      />
+      <!--radio options to specify questions-->
+      <span>Select one of the following.</span>
+      <fieldset>
+        <span class="radio-options">
+          <input
+            type="radio"
+            id="contact-question-info"
+            name="selection"
+            value="question"
+            class="radio-btn"
+            tabindex="0"
+          />
+          <label for="contact-question-info">Question</label>
+          <input
+            type="radio"
+            id="contact-comment-info"
+            name="selection"
+            value="comment"
+            class="radio-btn"
+            tabindex="0"
+          />
+          <label for="contact-comment-info">Comment</label>
+          <input
+            type="radio"
+            id="contact-order-info"
+            name="selection"
+            value="order-problem"
+            class="radio-btn"
+            tabindex="0"
+          />
+          <label for="contact-order-info">Order Problem</label>
+        </span>
+        <p class="contact-order-problem-text hidden">
+          <label for="contact-order-problem-text">Enter Order No</label>
+          <input type="text" id="contact-order-problem-text" name="order-no-info" />
+        </p>
+      </fieldset>
+
+      <textarea
+        id="contact-message-info"
+        name="message"
+        rows="8"
+        tabindex="0"
+        placeholder="Enter your message to send to us."
+      ></textarea>
+      <input type="hidden" id="Jeffrey-Li" name="Jeffrey-Li" value="Jeffrey-Li" />
+      <div id="buttons">
+        <input
+          id="contact-Subscribe"
+          type="submit"
+          name="subscribe-btn"
+          value="Submit"
+          tabindex="0"
+        />
+        <input type="reset" name="Reset" value="Reset Info" tabindex="-1" />
+      </div>
+    </form>
+    <footer id="foot-info">
+      <span id="foot-store-name"
+        ><a href="index.html" id="foot-to-home"
+          ><span id="foot-title">Sample</span> Fishing Supplies</a
+        ></span
+      >
+      <span class="contact-info">
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fab fa-facebook social"></i
+        ></a>
+        <a href="https://twitter.com/" target="_blank"
+          ><i class="fab fa-twitter-square social"></i
+        ></a>
+        <a href="https://outlook.live.com/owa/" target="_blank"
+          ><i class="fas fa-paper-plane social"></i></a
+      ></span>
+      <form id="email-form" action="https://formspree.io/mwkrydvz" method="POST">
+        <input
+          id="email-subscription"
+          type="email"
+          name="_replyto"
+          placeholder="Enter email for notifications"
+          size="35"
+          autocomplete="off"
+        />
+        <input id="Subscribe" type="submit" name="subscribe-btn" value="Click to Subscribe" />
+      </form>
+      <div id="center-foot">&copy; 2020 Jeffrey Li &nbsp;</div>
+    </footer>
+    <div id="go-top-btn">
+      <!-- https://fontawesome.com/icons/chevron-up?style=solid -->
+      <a href="#top"
+        ><i class="fas fa-chevron-up"></i>
+        <div id="go-top-text">top</div></a
+      >
+    </div>
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>

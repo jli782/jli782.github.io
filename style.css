@@ -1,0 +1,429 @@
+/* Add any CSS you need to this file. */
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Roboto&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Patua+One&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
+html {
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+}
+body {
+  overflow: hidden;
+  margin: auto;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+
+  background: rgb(243, 243, 239);
+  width: inherit;
+  overflow: hidden;
+  padding: 20px 10px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+header a:visited {
+  color: black;
+}
+header a:hover {
+  color: tan;
+}
+#comp-logo {
+  margin: 15px;
+  float: left;
+}
+h1 {
+  float: left;
+  position: relative;
+  top: 20px;
+  flex: 1;
+  font-size: 2.5em;
+}
+#head-title {
+  font-size: 1.6em;
+  font-family: Permanent Marker;
+  margin-right: 7px;
+}
+header h3 {
+  position: relative;
+  top: 42px;
+  margin-right: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  flex: 1;
+  font-size: 1.4em;
+  font-family: 'Shadows Into Light', cursive;
+  letter-spacing: 1.2px;
+}
+nav {
+  display: flex;
+  margin: auto;
+  background-color: rgb(54, 51, 47);
+  height: 40px;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+nav a {
+  display: block;
+  color: #ffffff;
+  background-color: rgb(54, 51, 47);
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+nav a:hover,
+nav ul li.active a:hover {
+  background-color: tan;
+  color: #ffffff;
+}
+nav ul li.active a {
+  background: rgb(185, 180, 172);
+  color: #ffffff;
+  font-weight: 900;
+}
+nav ul li.active ul a {
+  background-color: rgb(54, 51, 47);
+  color: #ffffff;
+}
+nav ul li ul {
+  padding: 12px 12px;
+  position: fixed;
+  display: block; /*flex*/
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  /* transition: opacity 0.5s; */
+}
+nav ul li:hover ul {
+  position: absolute;
+  display: block;
+  padding: 0;
+  width: 150px;
+  height: 40px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul li ul li {
+  display: block;
+  text-align: left;
+  width: 150px;
+}
+#body-content {
+  margin: 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  flex: 1;
+  align-items: baseline;
+  width: 100%;
+}
+
+.item p {
+  text-align: justify;
+  max-width: 300px;
+}
+.item {
+  margin: 20px 15px;
+  max-width: 30%;
+  max-height: 15%;
+  display: inline;
+  padding: 5px;
+  border: none;
+}
+.item a {
+  color: black;
+  text-decoration: none;
+}
+.item h2 {
+  font-family: 'Patua One', Arial, Helvetica, sans-serif;
+}
+.item a:hover {
+  color: tan;
+  text-decoration: underline;
+}
+.item-card-image {
+  text-align: center;
+}
+#body-content img {
+  max-width: 200px;
+  max-height: 200px;
+}
+.item-price {
+  margin-bottom: 5px;
+  text-align: right;
+}
+.item-rod {
+  text-align: right;
+  margin-top: 0;
+  font-weight: 150;
+}
+#foot-info {
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0;
+  display: block;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: rgb(243, 243, 239);
+  height: 50px;
+  padding-bottom: 35px;
+  padding-top: 11px;
+  font-size: 1.5em;
+}
+#email-form {
+  font-size: 0.7em;
+  align-items: center;
+  max-width: 100%;
+  width: 20%;
+  box-sizing: border-box;
+  float: right;
+  margin-top: 10px;
+  margin-right: 8%;
+  text-align: center;
+  display: grid;
+  padding: 3px;
+}
+#email-subscription:invalid {
+  color: crimson;
+  outline: 1px solid crimson;
+}
+input[type='Submit'],
+input[type='reset'] {
+  margin-top: 10px;
+  background-color: rgb(54, 51, 47);
+  color: white;
+  border: 0.5px solid rgb(100, 99, 98);
+  border-radius: 1px;
+  padding: 2.3px;
+}
+p.hidden {
+  display: none;
+}
+input[type='Submit']:hover,
+input[type='Submit']:focus,
+input[type='reset']:hover,
+input[type='reset']:focus {
+  background-color: tan;
+  color: white;
+  border: 0.5px solid white;
+}
+#center-foot {
+  font-size: 0.7em;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+#foot-store-name {
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+#foot-title {
+  font-family: Permanent Marker, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+#foot-store-name a:link,
+#foot-store-name a:visited {
+  text-decoration: none;
+  color: black;
+}
+#foot-store-name a:hover {
+  color: tan;
+}
+
+.social:hover {
+  color: tan;
+}
+.fa-facebook {
+  color: rgb(7, 7, 114);
+}
+.fa-twitter-square {
+  color: rgb(121, 209, 238);
+}
+.fas {
+  color: black;
+}
+
+#go-top-btn {
+  line-height: 0;
+  height: 70px;
+  overflow: hidden;
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  opacity: 0.5;
+  background-color: rgb(214, 204, 204);
+  color: #555;
+  text-align: center;
+  font-size: 2.5em;
+  text-decoration: none;
+  border-radius: 4px;
+  display: none;
+}
+#go-top-text {
+  font-size: 20px;
+  color: #555;
+  text-decoration: none;
+}
+
+#go-top-btn a {
+  height: 50px;
+  overflow: hidden;
+  z-index: 999;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  text-decoration: none;
+}
+#go-top-btn a:hover {
+  color: tan;
+  background-color: tan;
+}
+
+@media screen and (max-width: 980px) {
+  header h3 {
+    top: 15px;
+  }
+  #email-form {
+    max-width: 100%;
+    width: 20%;
+
+    margin-top: 10px;
+    margin-right: 18%;
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 900px) {
+  header h3 {
+    display: none;
+    line-height: 1.5em;
+  }
+
+  /* #body-content img {
+    max-width: 160px;
+  } */
+}
+@media screen and (max-width: 840px) {
+  #email-form {
+    max-width: 100%;
+    width: 20%;
+
+    margin-top: 10px;
+    margin-right: 17%;
+    padding: 3px;
+  }
+}
+@media screen and (max-width: 750px) {
+  #body-content {
+    margin: 20px 0px;
+    line-height: 20px;
+    align-items: baseline;
+  }
+  #body-content img {
+    max-width: 150px;
+  }
+  #body-content p {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 710px) {
+  header #comp-logo {
+    display: none;
+  }
+  .item {
+    line-height: 1.5em;
+  }
+  #foot-info {
+    height: 75px;
+    padding-top: 5px;
+  }
+  #email-form {
+    font-size: 0.3em;
+    display: block;
+    float: unset;
+    margin-top: 4px;
+    margin-right: 0;
+    width: unset;
+  }
+  #Subscribe {
+    margin-left: 25px;
+  }
+  #center-foot {
+    display: block;
+    padding: 3px 0;
+    padding-bottom: 10px;
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 640px) {
+  header #comp-logo {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  header #home {
+    vertical-align: middle;
+    position: relative;
+    bottom: 15px;
+  }
+  #body-content img {
+    max-width: 140px;
+    max-height: 160px;
+  }
+  #body-content {
+    align-items: baseline;
+  }
+  #body-content p {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.8em;
+    padding: 10px;
+  }
+  nav {
+    height: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    height: 60px;
+    font-size: smaller;
+  }
+  header {
+    font-size: medium;
+    padding: 5px;
+  }
+  #body-content {
+    align-items: baseline;
+  }
+  #body-content p {
+    text-align: left;
+  }
+  #go-top-btn a {
+    bottom: 100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    height: 40px;
+    font-size: xx-small;
+  }
+}
