@@ -38,20 +38,6 @@
       }
       return true;
     });
-
-    //some error messages
-    let email = document.querySelector('#contact-email-info');
-    email.addEventListener('input', () => {
-      if (this.checkValidity.patternMismatch) {
-        this.setCustomValidity('Enter a valid email!');
-      }
-    });
-    let postalCode = document.querySelector('#contact-postal-code-info');
-    postalCode.addEventListener('input', () => {
-      if (this.checkValidity.patternMismatch) {
-        this.setCustomValidity('Enter a valid Canadian Postal Code!');
-      }
-    });
   } //
   window.onload = setEvents;
 })();
