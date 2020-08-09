@@ -32,49 +32,53 @@
     <form
       id="contact-email-form"
       name="contact-email-form"
-      method="POST"
+      method="post"
       action="https://httpbin.org/post"
     >
-      <label for="contact-name-info">Name</label>
+      <label for="contact-name-info"><span class="required-asterisk">*</span>Name</label>
       <input
         id="contact-name-info"
-        name="contact-name"
+        type="text"
+        name="contact-full-name"
         autocomplete="name"
         required
-        type="text"
         autofocus
       />
-      <label for="contact-email-info">Email</label>
+      <label for="contact-email-info"><span class="required-asterisk">*</span>Email</label>
       <input
         id="contact-email-info"
         type="email"
         name="contact-email"
         placeholder="abc123@email.ca"
-        size="35"
-        autocomplete="off"
+        size="75"
+        autocomplete="email"
         required
         tabindex="0"
+        pattern="^.*@.+\.[a-zA-Z]{2,5}$"
       />
-      <label for="contact-address-info">Street Address</label>
+      <label for="contact-address-info"
+        ><span class="required-asterisk">*</span>Street Address</label
+      >
       <input
         id="contact-address-info"
         type="text"
-        name="contact-address-info"
+        name="contact-address"
+        autocomplete="street-address"
         required
-        size="50"
         tabindex="0"
       />
 
       <!--datalist for cities in Canada-->
-      <label for="contact-cty-info">City</label>
+      <label for="contact-cty-info"><span class="required-asterisk">*</span>City</label>
       <input
         list="canadian-cities"
         id="contact-cty-info"
-        name="contact-cty-info"
+        name="contact-cty"
         placeholder="Choose a city"
         tabindex="0"
         required
         size="30"
+        autocomplete="address-level1"
       />
       <datalist id="canadian-cities">
         <option value="Calgary"> </option>
@@ -87,17 +91,22 @@
         <option value="Winnipeg"> </option>
       </datalist>
 
-      <label for="contact-postal-code-info">Postal Code</label>
+      <label for="contact-postal-code-info"
+        ><span class="required-asterisk">*</span>Postal Code</label
+      >
       <input
         id="contact-postal-code-info"
         type="text"
         required
         tabindex="0"
         size="9"
+        name="contact-postal-code"
+        autocomplete="postal-code"
+        placeholder="ie. M4R 5K7"
         pattern="^[a-zA-Z][\d][a-zA-Z] ?[\d][a-zA-Z][\d]$"
       />
       <!--radio options to specify questions-->
-      <span>Select one of the following.</span>
+      <span><span class="required-asterisk">*</span>Select one of the following.</span>
       <fieldset>
         <span class="radio-options">
           <input
@@ -107,6 +116,7 @@
             value="question"
             class="radio-btn"
             tabindex="0"
+            required
           />
           <label for="contact-question-info">Question</label>
           <input
@@ -129,19 +139,21 @@
           <label for="contact-order-info">Order Problem</label>
         </span>
         <p class="contact-order-problem-text hidden">
-          <label for="contact-order-problem-text">Enter Order No</label>
+          <label for="contact-order-problem-text"
+            ><span class="required-asterisk">*</span>Enter Order No</label
+          >
           <input type="text" id="contact-order-problem-text" name="order-no-info" />
         </p>
       </fieldset>
 
       <textarea
         id="contact-message-info"
-        name="message"
+        name="contact-message-textarea"
         rows="8"
         tabindex="0"
         placeholder="Enter your message to send to us."
       ></textarea>
-      <input type="hidden" id="Jeffrey-Li" name="Jeffrey-Li" value="Jeffrey-Li" />
+      <input type="hidden" id="Jeffrey-Li" name="my-name" value="Jeffrey-Li" />
       <div id="buttons">
         <input
           id="contact-Subscribe"
@@ -173,10 +185,10 @@
         <input
           id="email-subscription"
           type="email"
-          name="_replyto"
+          name="email-subscription"
           placeholder="Enter email for notifications"
-          size="35"
-          autocomplete="off"
+          size="75"
+          autocomplete="email"
         />
         <input id="Subscribe" type="submit" name="subscribe-btn" value="Click to Subscribe" />
       </form>
