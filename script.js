@@ -152,6 +152,16 @@
 
     //at start hight all items
     document.querySelector('#all-items').className = 'menu-selection active';
+
+    //error message for email form
+    let emailSub = document.querySelector('#email-subscription');
+    emailSub.addEventListener('input', () => {
+      if (emailSub.validity.patternMismatch) {
+        emailSub.setCustomValidity('Enter a valid email! (ie. mbill@example.ca)');
+      } else {
+        emailSub.setCustomValidity('');
+      }
+    });
   } //
   window.onload = setEvents;
 })();

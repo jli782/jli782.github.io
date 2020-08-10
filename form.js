@@ -32,11 +32,39 @@
     let form = document.querySelector('#contact-email-form');
     form.addEventListener('submit', function(event) {
       if (!form.checkValidity()) {
-        form.classList.add('was-validated');
+        // form.classList.add('was-validated');
         event.preventDefault();
         return false;
       }
       return true;
+    });
+
+    //some error messages
+    let email = document.querySelector('#contact-email-info');
+    email.addEventListener('input', () => {
+      if (email.validity.patternMismatch) {
+        email.setCustomValidity('Enter a valid email! (ie. mbill@example.ca)');
+      } else {
+        email.setCustomValidity('');
+      }
+    });
+
+    let emailSub = document.querySelector('#email-subscription');
+    emailSub.addEventListener('input', () => {
+      if (emailSub.validity.patternMismatch) {
+        emailSub.setCustomValidity('Enter a valid email! (ie. mbill@example.ca)');
+      } else {
+        emailSub.setCustomValidity('');
+      }
+    });
+
+    let postalCode = document.querySelector('#contact-postal-code-info');
+    postalCode.addEventListener('input', () => {
+      if (postalCode.validity.patternMismatch) {
+        postalCode.setCustomValidity('Enter a valid Canadian Postal Code! (ie. M2R 4K5)');
+      } else {
+        postalCode.setCustomValidity('');
+      }
     });
   } //
   window.onload = setEvents;

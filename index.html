@@ -323,8 +323,9 @@
           type="email"
           name="_replyto"
           placeholder="Enter email for notifications"
-          size="35"
+          maxlength="70"
           autocomplete="off"
+          pattern="^.*@.+\.[a-zA-Z]{2,5}$"
         />
         <input id="Subscribe" type="submit" name="subscribe-btn" value="Click to Subscribe" />
       </form>

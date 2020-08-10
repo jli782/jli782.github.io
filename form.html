@@ -49,8 +49,8 @@
         id="contact-email-info"
         type="email"
         name="contact-email"
-        placeholder="abc123@email.ca"
-        size="75"
+        placeholder="ie. abc123@email.ca"
+        maxlength="75"
         autocomplete="email"
         required
         tabindex="0"
@@ -99,7 +99,7 @@
         type="text"
         required
         tabindex="0"
-        size="9"
+        maxlength="9"
         name="contact-postal-code"
         autocomplete="postal-code"
         placeholder="ie. M4R 5K7"
@@ -187,8 +187,9 @@
           type="email"
           name="email-subscription"
           placeholder="Enter email for notifications"
-          size="75"
+          maxlength="70"
           autocomplete="email"
+          pattern="^.*@.+\.[a-zA-Z]{2,5}$"
         />
         <input id="Subscribe" type="submit" name="subscribe-btn" value="Click to Subscribe" />
       </form>

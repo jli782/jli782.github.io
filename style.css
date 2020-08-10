@@ -104,7 +104,6 @@ nav ul li ul {
   opacity: 0;
   visibility: hidden;
   z-index: 1;
-  /* transition: opacity 0.5s; */
 }
 nav ul li:hover ul {
   position: absolute;
@@ -171,7 +170,6 @@ nav ul li ul li {
   font-weight: 150;
 }
 #foot-info {
-  /* position: fixed; */
   width: 100%;
   bottom: 0;
   display: block;
@@ -300,7 +298,6 @@ input[type='reset']:focus {
   #email-form {
     max-width: 100%;
     width: 20%;
-
     margin-top: 10px;
     margin-right: 18%;
     padding: 3px;
@@ -311,10 +308,6 @@ input[type='reset']:focus {
     display: none;
     line-height: 1.5em;
   }
-
-  /* #body-content img {
-    max-width: 160px;
-  } */
 }
 @media screen and (max-width: 840px) {
   #email-form {
@@ -435,5 +428,10 @@ input[type='reset']:focus {
   header {
     font-size: 0.7em;
     padding: 3px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #foot-info {
+    height: 110px;
   }
 }

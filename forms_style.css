@@ -34,7 +34,6 @@ fieldset {
   grid-row: 6/7;
 }
 .radio-options {
-  /* justify-content: right; */
   width: 100%;
 }
 input[type='radio'] {
@@ -83,14 +82,15 @@ input:hover,
 input:focus,
 textarea:focus,
 textarea:hover {
-  outline: 2px solid tan;
+  outline: 1.5px solid tan;
   border: 0;
   background-color: rgb(243, 243, 239);
 }
+
 @media screen and (max-width: 1000px) {
   #contact-email-form {
     margin: 20px auto;
-    max-width: 750px;
+    max-width: 900px;
   }
   input[type='radio'] {
     margin-left: 15px;
@@ -103,7 +103,7 @@ textarea:hover {
   #contact-email-form {
     margin: 20px auto;
     max-width: 650px;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 780px) {
@@ -127,6 +127,11 @@ textarea:hover {
   }
   #contact-email-form input {
     width: 90%;
+  }
+  #foot-info {
+    height: 100px;
+    line-height: 1.2em;
+    padding: 10px 0;
   }
 }
 @media screen and (max-width: 650px) {
