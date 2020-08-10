@@ -195,8 +195,8 @@ nav ul li ul li {
   padding: 3px;
 }
 #email-subscription:invalid {
-  color: crimson;
-  outline: 1px solid crimson;
+  color: tan;
+  outline: 1px solid tan;
 }
 input[type='Submit'],
 input[type='reset'] {
