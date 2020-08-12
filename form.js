@@ -32,7 +32,6 @@
     let form = document.querySelector('#contact-email-form');
     form.addEventListener('submit', function(event) {
       if (!form.checkValidity()) {
-        // form.classList.add('was-validated');
         event.preventDefault();
         return false;
       }
